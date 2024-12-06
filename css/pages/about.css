@@ -1,0 +1,143 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--background);
+}
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(to bottom, var(--light-beige), var(--background));
+    text-align: center;
+    padding: 8rem 2rem 6rem;
+    margin-bottom: 5rem;
+    border-bottom: 2px solid var(--light-beige);
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.about-hero p {
+    font-size: 1.35rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Main Content */
+.about-content {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+}
+
+.company-story, .values, .team {
+    margin-bottom: 7rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--gold-gradient);
+    border-radius: 2px;
+}
+
+.company-story p, .team p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+/* Values Grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.value-card {
+    background: var(--background);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s ease;
+    border: 1px solid var(--light-beige);
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lifted);
+    border-color: var(--primary-gold);
+}
+
+.value-card h3 {
+    color: var(--primary-gold);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.value-card p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 6rem 1.5rem 4rem;
+    }
+
+    .about-hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .about-content {
+        padding: 0 1.5rem 4rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .value-card {
+        padding: 2rem;
+    }
+}
